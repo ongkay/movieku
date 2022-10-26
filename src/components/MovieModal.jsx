@@ -40,38 +40,6 @@ const MovieModal = () => {
         getMoviesDetail();
     }, []);
 
-    // console.log('dataMovie');
-    // console.log(dataMovie);
-
-    // const fetchData = async () => {
-    //     axios
-    //         .get(
-    //             `https://api.themoviedb.org/3/movie/${dataMovie.id}?api_key=${key}&append_to_response=videos`,
-    //         )
-    //         .then((response) => {
-    //             const { backdrop_path, original_title, genres, runtime, videos } =
-    //                 response.data;
-
-    //             const trailerid = videos.results.find(
-    //                 (vid) => vid.name === 'Official Trailer',
-    //             );
-
-    //             let Trailer = trailerid ? trailerid : videos.results[0];
-
-    //             setShowMovie({
-    //                 ...dataMovie,
-    //                 backdrop_path,
-    //                 original_title,
-    //                 genres,
-    //                 runtime,
-    //                 Trailer,
-    //             });
-    //         })
-    //         .catch((error) => {
-    //             console.log(error);
-    //         });
-    // };
-
     const handleClick = () => {
         hideModal();
         navigate(`/${dataMovie.type}/${dataMovie.id}/${dataMovie.trailerKey}`);
@@ -92,7 +60,7 @@ const MovieModal = () => {
                 />
                 <img className=" w-64 rounded-l-xl" src={dataMovie.imageSource} />
                 <div className="p-5">
-                    <p className="text-2xl md:text-3xl mb-3 mt-2 md:mt-0">
+                    <p className="text-xl md:text-2xl mb-3 mt-2 md:mt-0">
                         {dataMovie.title}
                     </p>
 
@@ -116,7 +84,7 @@ const MovieModal = () => {
                             <div className="grid grid-flow-col auto-cols-max gap-4 mb-3">
                                 {dataMovie.genres &&
                                     dataMovie.genres.slice(0, 5).map((genre, i) => (
-                                        <span key={i} className="text-sm  md:text-base">
+                                        <span key={i} className="text-sm">
                                             {genre.name}
                                         </span>
                                     ))}

@@ -55,6 +55,5 @@ const useSearchMovie = create((set) => ({
 }));
 
 // create selector
-export const moviesSelector = createTrackedSelector(useMovieStore);
 export const MovieModalSelector = createTrackedSelector(useMovieModal);
 export const MovieSearchSelector = createTrackedSelector(useSearchMovie);
