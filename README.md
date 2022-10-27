@@ -6,7 +6,7 @@ Demo --> https://nontonmovieku.netlify.app/
 
 ![This is an image](https://im3.ezgif.com/tmp/ezgif-3-741b6efc56.gif)
 ![IMAGE ALT TEXT HERE](https://im3.ezgif.com/tmp/ezgif-3-741b6efc56.gif)
-![IMAGE ALT TEXT HERE](./reviewGif.gif)
+![IMAGE ALT TEXT HERE](reviewGif.gif)
 
 ## Fitur Unik yang sudah di buat :
 
