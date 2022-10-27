@@ -15,6 +15,7 @@ import App from './App';
 import PrivateComponent from './components/PrivateComponent';
 import About from './containers/About';
 import Login from './containers/Login';
+import ChangePass from './containers/ChangePass';
 import Home from './containers/Home';
 import Explore from './containers/Explore';
 import NotFound from './containers/NotFound';
@@ -65,6 +66,11 @@ const router = createBrowserRouter(
                     </PrivateComponent>
                 }
             />
+            <Route path="changepass" element={
+                <PrivateComponent loginOnly={true}>
+                    <ChangePass />
+                </PrivateComponent>
+            } />
             <Route
                 path="register"
                 element={

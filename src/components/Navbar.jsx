@@ -56,7 +56,7 @@ const Navbar = () => {
                             NONTON
                         </Link>
                     </Typography>
-                    <form className="relative flex w-3/4  ml-5" ref={ref}>
+                    <form className="relative flex w-1/2  ml-5" ref={ref}>
                         <div class="hidden relative md:block">
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                 <svg

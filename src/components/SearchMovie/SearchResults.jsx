@@ -20,6 +20,7 @@ const SearchResults = ({ search }) => {
                 });
             },
         );
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [search]);
 
     useEffect(() => {
@@ -30,6 +31,7 @@ const SearchResults = ({ search }) => {
         } else {
             setResults(true);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [movies]);
 
     return (

@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-// import ExploreResult from '../components/Explore';
 import ExploreFilter from '../components/Explore/ExploreFilter';
 import ExploreResult from '../components/Explore/ExploreResult';
 
 const Explore = () => {
-    const [searchParams, setSearchParams] = useSearchParams();
+    // const searchParams = useSearchParams();
+    const [searchParams] = useSearchParams();
 
     const [config, setConfig] = useState({});
 
@@ -22,11 +22,6 @@ const Explore = () => {
 
         const genreType = searchParams.getAll('genre') || [];
         changeConfig('with_genres', genreType.toString());
-
-        // const minRuntime = Number(searchParams.get('minRuntime')) || 0;
-        // const maxRuntime = Number(searchParams.get('maxRuntime')) || 200;
-        // changeConfig('with_runtime.gte', minRuntime);
-        // changeConfig('with_runtime.lte', maxRuntime);
 
         const releaseFrom = searchParams.get('from') || '2002-11-04';
         const releaseTo = searchParams.get('to') || '2022-07-28';

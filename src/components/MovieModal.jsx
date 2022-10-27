@@ -38,6 +38,7 @@ const MovieModal = () => {
             console.log(genres);
         };
         getMoviesDetail();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const handleClick = () => {

@@ -9,11 +9,7 @@ import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import useUserStore, {
-    selectErrorLogin,
-    selectOnLogin,
-    selectUserReady,
-} from '../store/user';
+import useUserStore, { selectErrorLogin, selectOnLogin, selectUserReady } from '../store/user';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -30,7 +26,7 @@ const Login = () => {
         await onLogin(email, password);
 
         if (userReady) {
-            navigate('/');
+            navigate("/");
         }
     };
 
@@ -71,7 +67,7 @@ const Login = () => {
                         id="password"
                         autoComplete="current-password"
                     />
-                    <Typography color="red">{errorLogin}</Typography>
+                    <Typography color='red'>{errorLogin}</Typography>
                     <Button
                         type="submit"
                         fullWidth
@@ -81,14 +77,16 @@ const Login = () => {
                         Sign In
                     </Button>
                     <Grid container>
-                        <Grid item>
-                            <Link to="/register">{"Don't have an account? Sign Up"}</Link>
+                        <Grid item sx={{color: "white"}}>
+                            <Link to="/register">
+                                {"Don't have an account? Sign Up"}
+                            </Link>
                         </Grid>
                     </Grid>
                 </Box>
             </Box>
         </Container>
     );
-};
+}
 
 export default Login;
