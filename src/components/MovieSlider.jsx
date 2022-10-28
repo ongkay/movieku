@@ -7,8 +7,6 @@ import 'swiper/css/pagination';
 import Loader from './Loader';
 
 const MovieSlider = ({ dataMovie, title, type, isLoading }) => {
-    // const [queryParams, setQueryParams] = useSearchParams();
-
     return (
         <div>
             <div className="mt-3">

@@ -29,7 +29,6 @@ const SearchMovieTile = ({ movie }) => {
     };
 
     const year = release_date.split('-');
-    // const dispatch = useDispatch();
 
     const overviews = overview.slice(0, 200);
     const overviewsLength = overview.length > 200;
@@ -40,11 +39,7 @@ const SearchMovieTile = ({ movie }) => {
             onClick={handleClick}
         >
             <div className="flex h-16">
-                <img
-                    className="rounded aspect-[2/3]"
-                    src={`https://image.tmdb.org/t/p/w400${poster_path}`}
-                    alt=""
-                />
+                <img className="rounded aspect-[2/3]" src={imageSource} alt="" />
                 <div className="flex-col ml-3">
                     <p>{title}</p>
                     <div className="flex items-center text-yellow-500">

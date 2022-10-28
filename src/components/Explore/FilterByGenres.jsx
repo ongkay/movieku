@@ -11,8 +11,6 @@ const FilterByGenres = () => {
     const [searchParam, setSearchParam] = useSearchParams();
 
     const [currentSearchParams] = useCurrentParams();
-    console.log('currentSearchParams Filter by genres');
-    console.log(currentSearchParams);
 
     if (isError) return <div>ERROR: {error.message}</div>;
 

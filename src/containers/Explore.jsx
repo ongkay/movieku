@@ -4,7 +4,6 @@ import ExploreFilter from '../components/Explore/ExploreFilter';
 import ExploreResult from '../components/Explore/ExploreResult';
 
 const Explore = () => {
-    // const searchParams = useSearchParams();
     const [searchParams] = useSearchParams();
 
     const [config, setConfig] = useState({});
@@ -30,11 +29,10 @@ const Explore = () => {
         changeConfig('air_date.gte', releaseFrom);
         changeConfig('air_date.lte', releaseTo);
 
-        console.log('changeConfig');
-        console.log(config);
-
         // eslint-disable-next-line
-    }, [location.search]);
+        console.log(genreType);
+    }, [searchParams]);
+
     return (
         <>
             <div className="flex flex-col-reverse md:flex-row">
